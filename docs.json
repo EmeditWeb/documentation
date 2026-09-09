@@ -1,0 +1,138 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "mint",
+  "name": "Stellar x402 MCP",
+  "colors": {
+    "primary": "#3e7bfa",
+    "light": "#689bfb",
+    "dark": "#2055d4"
+  },
+  "favicon": "/images/favicon.png",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Overview",
+            "pages": [
+              "quickstart",
+              "architecture/overview"
+            ]
+          },
+          {
+            "group": "Agent Framework Adapters",
+            "pages": [
+              "agent-frameworks/vercel-ai-sdk",
+              "agent-frameworks/langchain",
+              "agent-frameworks/llamaindex"
+            ]
+          },
+          {
+            "group": "Reference Applications",
+            "pages": [
+              "apps/paywalled-oracle",
+              "apps/trading-agent"
+            ]
+          },
+          {
+            "group": "Tooling & Errors",
+            "pages": [
+              "cli/overview",
+              "errors/error-codes",
+              "governance/contributing"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Guides",
+        "groups": [
+          {
+            "group": "Overview",
+            "pages": [
+              "introduction"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Payments",
+        "groups": [
+          {
+            "group": "Payment Modalities",
+            "pages": [
+              "payments/overview",
+              "payments/native-xlm",
+              "payments/soroban-sac",
+              "payments/path-payments",
+              "payments/state-channels",
+              "payments/claimable-balances",
+              "payments/fee-bumps",
+              "payments/amm-swaps"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Integrations",
+        "groups": [
+          {
+            "group": "Web & Server Integrations",
+            "pages": [
+              "integrations/custom-tools",
+              "integrations/express",
+              "integrations/fastify",
+              "integrations/hono"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Smart Contracts",
+        "groups": [
+          {
+            "group": "Soroban Contracts & Gas",
+            "pages": [
+              "contracts/channel-contract",
+              "contracts/gas-benchmarks",
+              "contracts/testnet-deployment"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "logo": {
+    "light": "/images/logo-light.svg",
+    "dark": "/images/logo-dark.svg"
+  },
+  "background": {
+    "color": {
+      "light": "#ffffff",
+      "dark": "#0b0f19"
+    }
+  },
+  "navbar": {
+    "links": [
+      {
+        "label": "Showcase",
+        "href": "https://stellar-x402-mcp.vercel.app"
+      },
+      {
+        "label": "GitHub",
+        "href": "https://github.com/stellar-x402-mcp/monorepo"
+      }
+    ],
+    "primary": {
+      "type": "github",
+      "href": "https://github.com/stellar-x402-mcp/monorepo"
+    }
+  },
+  "footer": {
+    "socials": {
+      "github": "https://github.com/stellar-x402-mcp/monorepo",
+      "x": "https://x.com/StellarOrg"
+    }
+  }
+}
