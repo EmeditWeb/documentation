@@ -1,0 +1,25 @@
+name: Validate Documentation
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate:
+    name: Mintlify Validation
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Validate Mintlify Build
+        run: npx mintlify validate
+
+      - name: Check for Broken Links
+        run: npx mintlify broken-links
