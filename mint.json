@@ -101,7 +101,8 @@
     {
       "group": "Reference Applications",
       "pages": [
-        "apps/paywalled-oracle"
+        "apps/paywalled-oracle",
+        "apps/trading-agent"
       ]
     },
     {
