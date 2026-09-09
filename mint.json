@@ -1,0 +1,114 @@
+{
+  "$schema": "https://mintlify.com/schema.json",
+  "name": "Stellar x402 MCP",
+  "logo": {
+    "dark": "/images/logo-dark.svg",
+    "light": "/images/logo-light.svg"
+  },
+  "favicon": "/images/favicon.png",
+  "colors": {
+    "primary": "#3e7bfa",
+    "light": "#689bfb",
+    "dark": "#2055d4",
+    "background": {
+      "dark": "#0b0f19",
+      "light": "#ffffff"
+    }
+  },
+  "topbarLinks": [
+    {
+      "name": "Showcase",
+      "url": "https://stellar-x402-mcp.vercel.app"
+    },
+    {
+      "name": "GitHub",
+      "url": "https://github.com/stellar-x402-mcp/monorepo"
+    }
+  ],
+  "topbarCtaButton": {
+    "type": "github",
+    "url": "https://github.com/stellar-x402-mcp/monorepo"
+  },
+  "tabs": [
+    {
+      "name": "Guides",
+      "url": "introduction"
+    },
+    {
+      "name": "Payments",
+      "url": "payments"
+    },
+    {
+      "name": "Integrations",
+      "url": "integrations"
+    },
+    {
+      "name": "Smart Contracts",
+      "url": "contracts"
+    },
+    {
+      "name": "API & Errors",
+      "url": "api-reference"
+    }
+  ],
+  "navigation": [
+    {
+      "group": "Overview",
+      "pages": [
+        "introduction",
+        "quickstart",
+        "architecture/overview"
+      ]
+    },
+    {
+      "group": "Payment Modalities",
+      "pages": [
+        "payments/overview",
+        "payments/native-xlm",
+        "payments/soroban-sac",
+        "payments/path-payments",
+        "payments/state-channels",
+        "payments/claimable-balances",
+        "payments/fee-bumps",
+        "payments/amm-swaps"
+      ]
+    },
+    {
+      "group": "Web & Server Integrations",
+      "pages": [
+        "integrations/custom-tools",
+        "integrations/express",
+        "integrations/fastify",
+        "integrations/hono"
+      ]
+    },
+    {
+      "group": "Agent Framework Adapters",
+      "pages": [
+        "agent-frameworks/vercel-ai-sdk",
+        "agent-frameworks/langchain",
+        "agent-frameworks/llamaindex"
+      ]
+    },
+    {
+      "group": "Soroban Contracts & Gas",
+      "pages": [
+        "contracts/channel-contract",
+        "contracts/gas-benchmarks",
+        "contracts/testnet-deployment"
+      ]
+    },
+    {
+      "group": "Tooling & Errors",
+      "pages": [
+        "cli/overview",
+        "errors/error-codes",
+        "governance/contributing"
+      ]
+    }
+  ],
+  "footerSocials": {
+    "github": "https://github.com/stellar-x402-mcp/monorepo",
+    "x": "https://x.com/StellarOrg"
+  }
+}

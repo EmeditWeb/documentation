@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 48" fill="none">
+  <rect width="40" height="40" y="4" rx="8" fill="#3E7BFA"/>
+  <path d="M12 24L20 16L28 24L20 32L12 24Z" fill="white"/>
+  <path d="M20 20L24 24L20 28L16 24L20 20Z" fill="#3E7BFA"/>
+  <text x="52" y="30" fill="#0B0F19" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700">Stellar x402</text>
+</svg>
