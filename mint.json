@@ -17,6 +17,10 @@
   },
   "topbarLinks": [
     {
+      "name": "Live Vercel Docs",
+      "url": "https://stellar-x402-mcp.vercel.app/docs"
+    },
+    {
       "name": "Showcase",
       "url": "https://stellar-x402-mcp.vercel.app"
     },

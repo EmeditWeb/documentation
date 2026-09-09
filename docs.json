@@ -116,6 +116,10 @@
   "navbar": {
     "links": [
       {
+        "label": "Live Docs",
+        "href": "https://stellar-x402-mcp.vercel.app/docs"
+      },
+      {
         "label": "Showcase",
         "href": "https://stellar-x402-mcp.vercel.app"
       },

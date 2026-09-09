@@ -1,6 +1,12 @@
 # Stellar x402 MCP Documentation
 
-Official Mintlify documentation repository for `stellar-x402-mcp`.
+Official documentation source repository for `stellar-x402-mcp`.
+
+[![Live Documentation](https://img.shields.io/badge/Live_Documentation-Vercel_Portal-3e7bfa?logo=vercel)](https://stellar-x402-mcp.vercel.app/docs)
+[![Showcase Portal](https://img.shields.io/badge/Showcase_Portal-Vercel-black?logo=vercel)](https://stellar-x402-mcp.vercel.app)
+[![GitHub Monorepo](https://img.shields.io/badge/GitHub-Monorepo-181717?logo=github)](https://github.com/stellar-x402-mcp/monorepo)
+
+> **Official Live Portal**: The complete interactive documentation portal with live search, 26 guides across 7 payment modalities, contract benchmarks, and 250 error codes is live at **[https://stellar-x402-mcp.vercel.app/docs](https://stellar-x402-mcp.vercel.app/docs)**.
 
 ## Local Development
 
