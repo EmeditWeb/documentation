@@ -1,0 +1,65 @@
+---
+title: "Payment Modalities Overview"
+description: "Comprehensive comparison of all seven Stellar payment mechanisms supported by Stellar x402."
+---
+
+# Seven Stellar Payment Modalities
+
+Stellar x402 is built to support the full spectrum of payment architectures available on the Stellar network and Soroban virtual machine. Depending on your throughput requirements, asset preferences, and latency constraints, agents and servers can negotiate any of the following settlement methods:
+
+---
+
+## Comparison Matrix
+
+| Modality | Asset Type | Latency | Typical Network Fee | Best Suited For |
+|---|---|---|---|---|
+| **Native XLM Direct** | XLM | ~3.2 seconds | 100 stroops (0.00001 XLM) | Low-frequency, zero-contract micro-payments |
+| **Soroban SAC Token** | USDC, EURC, SAC | ~4.1 seconds | ~1,450 stroops | High-precision fiat stablecoin settlement |
+| **Path Payments (DEX)** | Any Stellar pair | ~3.5 seconds | 100-300 stroops | Cross-currency payments with auto-conversion |
+| **State Channels (`x402_channel`)** | Any Soroban token | **< 1 ms** | **0 stroops** (off-chain) | High-frequency agent calls, streaming payments |
+| **Fee-Bump Transactions** | Sponsored | ~3.5 seconds | Sponsored | Gasless agents without native XLM balances |
+| **Claimable Balances** | Any asset | Conditional | 100 stroops | Multi-agent coordination, escrowed workflows |
+| **AMM Liquidity Swaps** | Liquidity pairs | ~3.5 seconds | 100-200 stroops | Direct pool settlement with minimal slippage |
+
+---
+
+## How Modalities Are Selected
+
+When an agent invokes a paywalled tool, the server returns an HTTP 402 challenge header declaring its accepted asset and pricing:
+
+```http
+WWW-Authenticate: X402 realm="Stellar MCP Paywall", network="stellar:testnet", asset="USDC", price="0.05", recipient="G..."
+```
+
+The `@stellar-mcp/agent-client` settlement engine automatically resolves the challenge:
+1. **Direct Match**: If the agent holds the requested asset (e.g. USDC), it submits a direct SAC transfer.
+2. **Asset Mismatch**: If the agent holds XLM but the server requests USDC, the client utilizes a **Path Payment (Strict Receive)** to route the swap through DEX liquidity seamlessly.
+3. **Active State Channel Session**: If an open channel exists between the agent and merchant, the client signs an off-chain voucher with zero transaction fee and zero on-chain latency.
+4. **Gas Sponsorship**: If the agent is configured with a relayer sponsor, the client constructs a **Fee-Bump Transaction**, eliminating the need for agent XLM reserves.
+
+---
+
+## Detailed Modality Guides
+
+Explore in-depth implementation details and code examples:
+
+<CardGroup cols={2}>
+  <Card title="Native XLM Direct" icon="coins" href="/payments/native-xlm">
+    Direct layer-1 payments using Stellar base operations.
+  </Card>
+  <Card title="Soroban SAC Tokens" icon="dollar-sign" href="/payments/soroban-sac">
+    USDC and custom Stellar Asset Contract token transfers.
+  </Card>
+  <Card title="Path Payments" icon="shuffle" href="/payments/path-payments">
+    Multi-hop decentralized exchange conversions on the fly.
+  </Card>
+  <Card title="State Channels" icon="bolt" href="/payments/state-channels">
+    Zero-fee off-chain vouchers settled via Soroban contracts.
+  </Card>
+  <Card title="Fee-Bump Transactions" icon="gas-pump" href="/payments/fee-bumps">
+    Relayer-sponsored gasless transactions for agents.
+  </Card>
+  <Card title="Claimable Balances" icon="clock" href="/payments/claimable-balances">
+    Time-locked escrows for multi-agent workflows.
+  </Card>
+</CardGroup>

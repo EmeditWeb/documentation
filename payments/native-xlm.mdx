@@ -1,0 +1,72 @@
+---
+title: "Native XLM Direct Payments"
+description: "Direct layer-1 micro-payments using native Lumens (XLM) on Stellar Horizon."
+---
+
+# Native XLM Direct Payments
+
+Native XLM direct payment is the simplest, lowest-overhead settlement method in Stellar x402. It requires zero smart contract invocations and settles natively on the Stellar consensus layer within 3 to 5 seconds.
+
+---
+
+## How It Works
+
+When an agent receives an x402 challenge requesting native Lumens (`asset: "native"` or `asset: "XLM"`), the settlement engine builds a classic Stellar `Operation.payment`:
+
+```typescript
+import { Operation, TransactionBuilder, Networks, Asset } from '@stellar/stellar-sdk';
+
+const paymentOp = Operation.payment({
+  destination: challenge.recipient,
+  asset: Asset.native(),
+  amount: challenge.price, // e.g. "0.01" XLM
+});
+```
+
+The transaction envelope is signed by the agent's `InMemoryWalletSigner` and submitted directly to Stellar Horizon.
+
+---
+
+## Server Verification Flow
+
+On the server side, `OnChainTransactionVerifier` validates the payment against Horizon:
+
+1. Fetches the transaction details via `GET /transactions/{txHash}`.
+2. Checks that `successful === true`.
+3. Validates that the transaction's memo matches `challenge.memo`.
+4. Inspects operations to confirm that `type === 'payment'`, `to === challenge.recipient`, and `amount >= challenge.price`.
+5. Records the transaction hash in `ReplayProtector` to prevent double-spending.
+
+---
+
+## Code Example: Client-Side Execution
+
+```typescript
+import { MultiPaymentSettlementEngine, InMemoryWalletSigner } from '@stellar-mcp/agent-client';
+
+const signer = InMemoryWalletSigner.fromSecret(process.env.STELLAR_SECRET!);
+const engine = new MultiPaymentSettlementEngine(signer);
+
+// Settle an incoming challenge with Native XLM
+const settlement = await engine.settleChallenge(challenge, {
+  method: 'native_xlm',
+});
+
+console.log(`Settled Native XLM Tx: ${settlement.txHash}`);
+```
+
+---
+
+## Benefits & Constraints
+
+<CardGroup cols={2}>
+  <Card title="Advantages" icon="check">
+    - Zero smart contract deployment or invocation overhead.
+    - Minimal base fee (100 stroops = 0.00001 XLM).
+    - Supported natively by all Stellar Horizon nodes.
+  </Card>
+  <Card title="Considerations" icon="circle-info">
+    - Requires agent to hold native XLM balances.
+    - Volatility exposure compared to stablecoins (USDC).
+  </Card>
+</CardGroup>
