@@ -1,6 +1,6 @@
 # Introduction to Stellar x402
 
-[![Live Documentation](https://img.shields.io/badge/Live_Documentation-Vercel_Portal-3e7bfa?logo=vercel)](https://stellar-x402-mcp.vercel.app/docs)
+[![Live Documentation](https://img.shields.io/badge/Live_Documentation-GitBook-3e7bfa?logo=gitbook)](https://emeditweb.gitbook.io/x402)
 [![Showcase Portal](https://img.shields.io/badge/Showcase_Portal-Vercel-black?logo=vercel)](https://stellar-x402-mcp.vercel.app)
 [![GitHub Monorepo](https://img.shields.io/badge/GitHub-Monorepo-181717?logo=github)](https://github.com/stellar-x402-mcp/monorepo)
 

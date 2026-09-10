@@ -17,8 +17,8 @@
   },
   "topbarLinks": [
     {
-      "name": "Live Vercel Docs",
-      "url": "https://stellar-x402-mcp.vercel.app/docs"
+      "name": "Live Docs",
+      "url": "https://emeditweb.gitbook.io/x402"
     },
     {
       "name": "Showcase",
