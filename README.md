@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="images/logo.png" width="140" height="140" alt="Stellar x402 Logo" style="border-radius: 20px;" />
+</p>
+
 # Introduction to Stellar x402
 
 [![Live Documentation](https://img.shields.io/badge/Live_Documentation-GitBook-3e7bfa?logo=gitbook)](https://emeditweb.gitbook.io/x402)
