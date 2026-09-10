@@ -1,8 +1,9 @@
-# Introduction to Stellar x402
+---
+title: "Introduction"
+description: "Model Context Protocol (MCP) server, institutional developer tooling system, and multi-payment settlement framework for Stellar and Soroban."
+---
 
-[![Live Documentation](https://img.shields.io/badge/Live_Documentation-Vercel_Portal-3e7bfa?logo=vercel)](https://stellar-x402-mcp.vercel.app/docs)
-[![Showcase Portal](https://img.shields.io/badge/Showcase_Portal-Vercel-black?logo=vercel)](https://stellar-x402-mcp.vercel.app)
-[![GitHub Monorepo](https://img.shields.io/badge/GitHub-Monorepo-181717?logo=github)](https://github.com/stellar-x402-mcp/monorepo)
+# Introduction to Stellar x402
 
 **Stellar x402** is an open-source Model Context Protocol (MCP) tooling system and micro-payment settlement framework built on the Stellar network and Soroban smart contract platform.
 
@@ -77,7 +78,7 @@ The protocol is partitioned into four independent, decoupled layers:
 
 ---
 
-## Next Steps & Guide Index
+## Next Steps
 
 * [**Quickstart Guide**](quickstart.md)
   Install packages and run your first paywalled Stellar MCP server in 5 minutes.
@@ -87,5 +88,3 @@ The protocol is partitioned into four independent, decoupled layers:
   Learn how Native XLM, SAC tokens, Path Payments, and State Channels operate.
 * [**Agent Adapters**](agent-frameworks/vercel-ai-sdk.md)
   Integrate Stellar tools into Vercel AI SDK, LangChain, or LlamaIndex.
-* [**Universal 250 Error Codes**](errors/error-codes.md)
-  Comprehensive catalog of standardized, machine-readable error codes.
