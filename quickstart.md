@@ -152,6 +152,6 @@ Output:
 
 ## Next Steps
 
-- Learn about [Payment Modalities](/payments/overview) to support native XLM, SAC tokens, and off-chain state channels.
-- Integrate with [Vercel AI SDK](/agent-frameworks/vercel-ai-sdk) or [LangChain](/agent-frameworks/langchain).
-- Explore [Claude Desktop and Cursor Setup](/cli/overview#ide-configuration-templates).
+- Learn about [Payment Modalities](payments/overview.md) to support native XLM, SAC tokens, and off-chain state channels.
+- Integrate with [Vercel AI SDK](agent-frameworks/vercel-ai-sdk.md) or [LangChain](agent-frameworks/langchain.md).
+- Explore [Claude Desktop and Cursor Setup](cli/overview.md#ide-configuration-templates).

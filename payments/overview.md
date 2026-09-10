@@ -43,15 +43,15 @@ The `@stellar-mcp/agent-client` settlement engine automatically resolves the cha
 
 Explore in-depth implementation details and code examples:
 
-* [**Native XLM Direct**](payments/native-xlm.md)
+* [**Native XLM Direct**](native-xlm.md)
   Direct layer-1 payments using Stellar base operations.
-* [**Soroban SAC Tokens**](payments/soroban-sac.md)
+* [**Soroban SAC Tokens**](soroban-sac.md)
   USDC and custom Stellar Asset Contract token transfers.
-* [**Path Payments**](payments/path-payments.md)
+* [**Path Payments**](path-payments.md)
   Multi-hop decentralized exchange conversions on the fly.
-* [**State Channels**](payments/state-channels.md)
+* [**State Channels**](state-channels.md)
   Zero-fee off-chain vouchers settled via Soroban contracts.
-* [**Fee-Bump Transactions**](payments/fee-bumps.md)
+* [**Fee-Bump Transactions**](fee-bumps.md)
   Relayer-sponsored gasless transactions for agents.
-* [**Claimable Balances**](payments/claimable-balances.md)
+* [**Claimable Balances**](claimable-balances.md)
   Time-locked escrows for multi-agent workflows.
