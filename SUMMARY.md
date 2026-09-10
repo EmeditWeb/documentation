@@ -5,6 +5,7 @@
 
 ## System Architecture
 * [Architecture & Security Model](architecture/overview.md)
+* [Mainnet Deployment & Hardening](security/mainnet-hardening.md)
 
 ## Payment Modalities
 * [Payment Modalities Overview](payments/overview.md)
