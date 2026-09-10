@@ -34,4 +34,4 @@ The documentation preview will be accessible at `http://localhost:3000`.
 - `contracts/`: Soroban `x402_channel` smart contract specification and gas benchmarks.
 - `cli/`: `stellar-mcp` CLI command reference.
 - `errors/`: Universal 250 Error Codes Registry with remediation guides.
-- `governance/`: Open source contribution standards modeled after Stellar-IndigoPay PR #1211.
+- `governance/`: Open source contribution standards and pull request verification criteria.

@@ -46,7 +46,7 @@ The `@stellar-mcp/agent-client` library enforces rigorous client-side guardrails
 - **Per-Call Budget Caps**: Rejects any individual tool invocation exceeding pre-set limits (e.g., maximum 0.05 USDC).
 - **Daily Cumulative Budget Limits**: Automatically halts agent signing once daily spend thresholds are reached.
 - **Provider Whitelists**: Restricts automated payments strictly to verified merchant public keys and audited Soroban contracts.
-- **Production Circuit Breaker**: Modeled after Stellar-IndigoPay PR #1211, instantly fails fast during RPC downtime to prevent resource draining.
+- **Production Circuit Breaker**: Instantly fails fast during RPC downtime to prevent resource draining.
 
 ---
 

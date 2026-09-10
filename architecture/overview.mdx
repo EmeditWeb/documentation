@@ -67,7 +67,7 @@ flowchart TD
 Responsible for managing agent credentials, spending policies, and framework bridges:
 - **`InMemoryWalletSigner`**: Holds Stellar Keypairs strictly in memory. Private keys are never serialized to disk, never printed in error logs, and never sent over the network.
 - **`BudgetTracker`**: Enforces strict financial limits (`maxSpendPerCall`, `dailyBudget`, and `allowedRecipients`). If an agent attempts to call a tool costing more than its budget, execution halts with error code `1192` (`ERR_CLIENT_BUDGET_DAILY_EXCEEDED`).
-- **`CircuitBreaker`**: Inspired by `Stellar-IndigoPay` PR #1211. Detects repeated upstream RPC failures and opens the circuit, failing fast with 0 network calls until recovery.
+- **`CircuitBreaker`**: Detects repeated upstream RPC failures and opens the circuit, failing fast with 0 network calls until recovery.
 - **Framework Adapters**: Bridges tools seamlessly into **Vercel AI SDK Core**, **LangChain.js**, and **LlamaIndex.TS**.
 
 ---
