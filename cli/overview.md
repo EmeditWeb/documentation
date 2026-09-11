@@ -34,12 +34,16 @@ stellar-mcp serve --transport stdio --network testnet
 
 # Run over Server-Sent Events (SSE) on port 3000
 stellar-mcp serve --transport sse --port 3000 --network testnet
+
+# Run over SSE with Bearer Token authorization
+stellar-mcp serve --transport sse --port 3000 --auth-token YOUR_SECRET_TOKEN
 ```
 
 Options:
 - `-t, --transport <transport>`: Transport protocol (`stdio` or `sse`). Default: `stdio`.
 - `-n, --network <network>`: Stellar network (`testnet` or `pubnet`). Default: `testnet`.
 - `-p, --port <port>`: HTTP port for SSE. Default: `3000`.
+- `--auth-token <token>`: Bearer token for authenticating incoming remote SSE connections.
 
 ---
 
